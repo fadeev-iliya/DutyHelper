@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ученики</title>
+    <link href="home.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Ученики</h1>
+    <div class="parent">
+
+        <div class="List_of_days">
+            Список дней
+        </div>
+        
+        <div class="Doc_send">
+            <form method="post" action="multipart/form-data">
+                <label>Отправка только .docx</label>
+                <p></p>
+                <input type="file" id="docpicker" accept=".docx" />
+                <p></p>
+                <button>Отправить расписание</button>
+            </form>
+        </div>
+        
+        <div class="scrollmenu_Classes">
+            <table border="1" class="missing">
+                <tr>
+                    <td rowspan="2">Класс</td>
+                    <td colspan="2">Нет по причине</td>
+                    <td colspan="2">Нет без причины</td>
+                </tr>
+                <tr>
+                    <td>Кол-во</td>
+                    <td>ФИО</td>
+                    <td>Кол-во</td>
+                    <td>ФИО</td>
+                </tr>
+                <tr>
+                    <td>8л1</td>
+                    <td>1</td>
+                    <td>Мугинов Айдар Булатович</td>
+                    <td>1</td>
+                    <td>Галяви Булат Рустемович</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
