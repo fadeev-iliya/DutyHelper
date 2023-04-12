@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ученики</title>
+    <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <span>Учительская страница</span>
+    </header>
+    <main>
+        <div class="sidebar">
+            <!-- Список всех сохраненных дней -->
+            <div class="List_of_days">
+                <h2>Все дни</h2>
+                <ul>
+                    <% dates.forEach((el) => { %>
+                        <li>
+                            <a href="./<%= el.date %>" role="button"><%= el.name %></a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+            
+            <!-- Место для отсылки нового расписания -->
+            <div class="Doc_send">
+                <form method="post" action="multipart/form-data">
+                    <label>Отправка только .docx</label>
+                    <p></p>
+                    <input type="file" id="docpicker" accept=".docx" />
+                    <p></p>
+                    <button>Отправить расписание</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Основное меню  -->
+        <div class="Classes">
+            <table border="1" class="missing">
+                <tr>
+                    <td rowspan="2">Класс</td>
+                    <td colspan="2">По причине</td>
+                    <td colspan="2">Без причины</td>
+                </tr>
+                <tr>
+                    <td>Кол-во</td>
+                    <td>ФИО</td>
+                    <td>Кол-во</td>
+                    <td>ФИО</td>
+                </tr>
+                <% today_data.forEach((el) => { %>
+                    <tr>
+                        <td class="cls_name"><%= el.cls_name %></td>
+                        <td class="count"><%= el.total_FR %></td>
+                        <td class="full_name"><%= el.for_reason %></td>
+                        <td class="count"><%= el.total_NR %></td>
+                        <td class="full_name"><%= el.no_reason %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

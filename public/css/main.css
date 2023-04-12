@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar{
+    margin-left: 0;
+    padding: 0;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+}
+
+.Classes {
+    padding: 0;
+    margin: 0;
+    margin-left: 20%;
+    margin-right: 0%;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.List_of_days{
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    height: 80%;
+    width: 30%;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.Doc_send{
+    margin-top: 38%;
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 20%;
+    width: 30%;
+    position: fixed;
+}
+
+.cls_name{
+    width: 70px;
+    height: 1em;
+}
+
+.count{
+    width: 70px;
+    height: 1em;
+}
+
+.full_name{
+    width: 40%;
+    height: 1em;
+}
