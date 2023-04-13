@@ -19,7 +19,7 @@
                 <ul>
                     <% dates.forEach((el) => { %>
                         <li>
-                            <a href="./<%= el.date %>" role="button"><%= el.name %></a>
+                            <a href="./<%= el.date %>" role="button"><%= el.date_name %></a>
                         </li>
                     <% }) %>
                 </ul>
@@ -51,9 +51,9 @@
                     <td>Кол-во</td>
                     <td>ФИО</td>
                 </tr>
-                <% today_data.forEach((el) => { %>
+                <% today_report.forEach((el) => { %>
                     <tr>
-                        <td class="cls_name"><%= el.cls_name %></td>
+                        <td class="cls_name"><%= el.class_name %></td>
                         <td class="count"><%= el.total_FR %></td>
                         <td class="full_name"><%= el.for_reason %></td>
                         <td class="count"><%= el.total_NR %></td>

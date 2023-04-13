@@ -1,0 +1,20 @@
+{
+    "first_lesson":
+    [
+        {
+            "class_name":"8л1" , 
+            "name": "8л1 - 106",
+            "sequence": 0
+        },
+        {
+            "class_name":"8л2" , 
+            "name": "7л1 - 102",
+            "sequence": 1
+        },
+        {
+            "class_name":"7л1" , 
+            "name": "7л1 - 102",
+            "sequence": 2
+        }
+    ]
+}
