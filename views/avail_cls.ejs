@@ -9,17 +9,20 @@
 </head>
 <body>
     <h2 class="page_name">Доступные классы</h2>
-    <div class="MyTable"> 
+    <div  class="MyTable"> 
         <div class="first_col">
-            <div class="Class_button" style="background-color: red;">8л1 - 317 -></div>
-            <div class="Class_button" style="background-color: red;">8л1 - 317 -></div>
+            <% collums.first_col.forEach((el) => { %>
+                <div class="Class_button" style="background-color: <%= el.status %>"><%= el.name %> -></div>
+            <% }) %>
         </div>
         <div class="second_col">
-            <div class="Class_button" style="background-color: yellow;">8л1 - 317 -></div>
-        </div>
+            <% collums.second_col.forEach((el) => { %>
+                <div class="Class_button" style="background-color: <%= el.status %>"><%= el.name %> -></div>
+            <% }) %></div>
         <div class="third_col">
-            <div class="Class_button" style="background-color: green;">8л1 - 317 -></div>
-        </div>
+            <% collums.third_col.forEach((el) => { %>
+                <div class="Class_button" style="background-color: <%= el.status %>"><%= el.name %> -></div>
+            <% }) %></div>
     </div>
 </body>
 </html>

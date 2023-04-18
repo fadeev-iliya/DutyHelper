@@ -111,3 +111,69 @@ body {
     padding-bottom: 10px;
     padding-left: 30px;
 }
+
+.short_manual {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.check_item_no_reason {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.check_item_for_reason {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.List_of_students {
+    margin-top: 20px;
+}
+.check_item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 20px;
+}
+
+.for_reason {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 20%;
+}
+
+.no_reason {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 30px;
+    width: 30px;
+    background-color: blue;
+    border-radius: 20%;
+}
+
+.in_school {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 20%;
+}
+
+.student_name {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 30px;
+}
