@@ -77,30 +77,37 @@ body {
 
 .MyTable {
     display: grid;
-    margin: 0;
-    margin-left: 50px;
-    margin-right: 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 50px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .first_col{
     grid-column: 1/2;
+    margin-right: 5%;
 }
 
 .second_col{
     grid-column: 2/3;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .third_col {
     grid-column: 3/4;
+    margin-left: 5%;
 }
 
 .Class_button {
     height: min-content;
-    width: fit-content;
+    width: 100%;
     padding: 5px;
     border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
 }
 
 .page_name {

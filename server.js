@@ -3,6 +3,10 @@ const fs = require('fs')
 
 const app = express()
 
+const red = "rgba(255, 0, 0, 0.755)"
+const yellow = "rgba(255, 255, 0, 0.755)"
+const green = "rgba(13, 231, 13, 0.755)"
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
@@ -31,9 +35,9 @@ app.get('/user/:username', (req, res) => {
 
 app.get('/student/available_cls', (req, res) => {
     let collums = {
-        first_col:  [{name: "8л1 - 317", status: "red", cls_name: "8l1"}, {name: "8л2 - 319", status: "red", cls_name: "8l2"},    {name: "7л1 - 207", status: "yellow", cls_name: "7l1"}],
-        second_col: [{name: "9л1 - 317", status: "red", cls_name: "9l1"}, {name: "8л2 - 319", status: "yellow", cls_name: "8l2"}, {name: "7л1 - 207", status: "yellow", cls_name: "7l1"}],
-        third_col:  [{name: "6м - 317", status: "red", cls_name: "6m"}, {name: "8л2 - 319", status: "yellow", cls_name: "8l2"}, {name: "7л1 - 207", status: "green", cls_name: "7l1"}]
+        first_col:  [{name: "8л1 - 317", status: red, cls_name: "8l1"}, {name: "8л2 - 319", status: red, cls_name: "8l2"},    {name: "7л1 - 207", status: yellow, cls_name: "7l1"}],
+        second_col: [{name: "9л1 - 317", status: red, cls_name: "9l1"}, {name: "8л2 - 319", status: yellow, cls_name: "8l2"}, {name: "7л1 - 207", status: yellow, cls_name: "7l1"}],
+        third_col:  [{name: "6м - 317", status: red, cls_name: "6m"}, {name: "8л2 - 319", status: yellow, cls_name: "8l2"}, {name: "7л1 - 207", status: green, cls_name: "7l1"}]
     }
     res.render('avail_cls', {collums: collums})
 })
