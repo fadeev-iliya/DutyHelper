@@ -11,12 +11,6 @@ let timetable = fs.readFileSync('./public/data/timetable.json','utf-8', function
     console.log(data)   })
     
 
-let information = [
-    {date: "20230411", name: "Вт 2023.06.11", data: [{cls_name: "8л1", for_reason: "Галяви Булат Рустемович, Фадеев Илья Олегович", total_FR: 2, no_reason: "Мугинов Айдар Булатович", total_NR: 1}]},
-    {date: "20230412", name: "Вт 2023.06.12", data: [{cls_name: "8л1", for_reason: "Галяви Айдар Рустемович, Фадеев Арсений Олегович", total_FR: 2, no_reason: "Мугинов Айдар Булатович", total_NR: 1}]},
-    {date: "20230413", name: "Вт 2023.06.13", data: [{cls_name: "8л1", for_reason: "Галяви Чел Рустемович, Фадеев Илья Олегович", total_FR: 2, no_reason: "Жеребцов Айдар Булатович", total_NR: 1}]}
-]
-
 app.get('/teacher/:date', (req, res) => {
     let reports_file = fs.readFileSync("./public/data/reports.json",'utf-8', function(err, data) {if (err) throw err })
     let all_reports = JSON.parse(reports_file)
@@ -35,8 +29,8 @@ app.get('/user/:username', (req, res) => {
 })
 
 app.get('/student/available_cls', (req, res) => {
-    let available = [{name: "8л1 - 106", num: 0, list_of_cls: [{name: 'Илья', report: 1}]}]
-    res.render('avail_cls', )
+    let available = [{name: "8л1 - 106", list_of_cls: [{name: 'Илья', report: 1}]}]
+    res.render('avail_cls', available)
 })
 
 const PORT = 3000
