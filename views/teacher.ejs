@@ -8,18 +8,15 @@
     <link href="/css/main.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <span>Учительская страница</span>
-    </header>
     <main>
         <div class="sidebar">
             <!-- Список всех сохраненных дней -->
             <div class="List_of_days">
-                <h2>Все дни</h2>
+                <h1>Все дни</h1>
                 <ul>
                     <% dates.forEach((el) => { %>
-                        <li>
-                            <a href="./<%= el.date %>" role="button"><%= el.date_name %></a>
+                        <li class="date_li_button">
+                            <a class="date_button" href="./<%= el.date %>" role="button"><%= el.date_name %></a>
                         </li>
                     <% }) %>
                 </ul>
