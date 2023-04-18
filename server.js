@@ -10,6 +10,7 @@ let timetable = fs.readFileSync('./public/data/timetable.json','utf-8', function
     if (err) throw err; 
     console.log(data)   })
     
+    
 
 app.get('/teacher/:date', (req, res) => {
     let reports_file = fs.readFileSync("./public/data/reports.json",'utf-8', function(err, data) {if (err) throw err })
