@@ -74,3 +74,40 @@ body {
     list-style-type: none;
     margin-left: -4%;
 }
+
+.MyTable {
+    display: grid;
+    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.first_col{
+    grid-column: 1/2;
+}
+
+.second_col{
+    grid-column: 2/3;
+}
+
+.third_col {
+    grid-column: 3/4;
+}
+
+.Class_button {
+    height: min-content;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.page_name {
+    background-color: #232323;
+    color: white;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
